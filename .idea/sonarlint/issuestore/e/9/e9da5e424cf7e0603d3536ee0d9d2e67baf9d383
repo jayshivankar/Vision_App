@@ -1,0 +1,8 @@
+
+fkotlin:S63103"Avoid hardcoded dispatchers.(äÕ”øÿÿÿÿ8ñşßø£2J$172cae56-99d9-4227-b6f8-515eb0acc5a8
+›kotlin:S63113"QRemove this dispatcher. It is pointless when used with only suspending functions.(äÕ”øÿÿÿÿ8òşßø£2J$996478e8-adc6-4a1f-83bf-5210262ba5df
+kotlin:S63063"TUsing "GlobalScope" here leads to the breaking of structured concurrency principles.(äÕ”øÿÿÿÿ8öşßø£2J$82d9dc3b-c843-4789-bcb1-ae4b2dc191cc
+dkotlin:S1128	"Remove this unused import.(ÊÒÅ­ùÿÿÿÿ8úşßø£2J$ae3b2bd3-f6a3-4e50-97fc-2d8d776b7c8f
+_kotlin:S1128"Remove this unused import.(„œÊÖ8úşßø£2J$57e46397-a97a-4575-acb8-bc7d0d57a445
+dkotlin:S1128"Remove this unused import.(Ôâôüÿÿÿÿ8úşßø£2J$94ff77b1-eabb-4ebd-a2da-28a44dba81c4
+dkotlin:S1128"Remove this unused import.(úÉàºøÿÿÿÿ8úşßø£2J$1dd1ef51-09c9-4756-8996-3d329c0da28f
