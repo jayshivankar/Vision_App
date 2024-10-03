@@ -50,11 +50,15 @@ private fun initializeInterpreter(){
     val model = loadModelFile(assetManager,"converted_model.tfLite")
     labels = loadLines(context,"labels.txt")
     val options = Interpreter.Options()
-    gpuDelegate = GpuDelegate()
+ //check for gpudelegate
+    var gpuDelegate = GpuDelegate()
     options.addDelegate(gpuDelegate)
     val interpreter = Interpreter(model,options)
 
     val inputShape = interpreter.getInputTensor(0).shape()
+     var inputImageWidth:Int =0
+     var inputImageHeight:Int =0
+     var modelInputSize:Int =0
     inputImageWidth = inputShape[1]
     inputImageHeight = inputShape[2]
     modelInputSize = FLOAT_TYPE_SIZE * inputImageWidth * inputImageHeight * CHANNEL_SIZE
@@ -64,4 +68,23 @@ private fun initializeInterpreter(){
 }
 
 @Throws(IOException::class)
+private fun loadModelFile(assestManager: AssetManager,filename:String):ByteBuffer{
+    val fileDescriptor = assestManager.openFd(filename)
+    val inputStream = FileInputStream(fileDescriptor.fileDescriptor)
+    val fileChannel = inputStream.channel
+    val startOffset = fileDescriptor.startOffset
+    val declaredLength = fileDescriptor.declaredLength
+    return fileChannel.map(FileChannel.MapMode.READ_ONLY,startOffset,declaredLength)
+}
+
+@Throws(IOException::class)
+fun loadLines(context: Context,filename: String):ArrayList<String>{
+    val s = Scanner(InputStreamReader(context.assets.open(filename)))
+    val labels = ArrayList<String>()
+    while (s.hasNextLine()){
+        labels.add(s.nextLine())
+    }
+    s.close()
+    return labels
+}
 private fun
