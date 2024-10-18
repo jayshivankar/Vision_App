@@ -34,7 +34,7 @@ class MessageActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
-        val editTextMultiline = findViewById<EditText>(R.id.editTextPhone)
+        val editTextMultiline = findViewById<EditText>(R.id.editTextTextMultiLine)
         val editTextPhone = findViewById<EditText>(R.id.editTextPhone)
         val sendMsg = findViewById<Button>(R.id.sendMsg)
         super.onCreate(savedInstanceState)
@@ -49,18 +49,18 @@ class MessageActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         } else
             receiveMsg()
 
-        editTextMultiline.setOnClickListener {
+        editTextMultiline?.setOnClickListener {
             tts?.speak("Please speak your Message",TextToSpeech.QUEUE_FLUSH,null,null)
             Thread.sleep(2000)
             speakMsg()
         }
-        editTextPhone.setOnClickListener {
+        editTextPhone?.setOnClickListener {
             tts?.speak("Please speak recipent's phone number",TextToSpeech.QUEUE_FLUSH,null,null)
             Thread.sleep(2000)
             speakPhone()
 
         }
-        sendMsg.setOnClickListener {
+        sendMsg?.setOnClickListener {
             val sms : SmsManager = SmsManager.getDefault()
             sms.sendTextMessage(
                 editTextPhone.text.toString(),

@@ -37,7 +37,7 @@ class PhoneActivity : AppCompatActivity(), View.OnClickListener,View.OnLongClick
         phoneNum = findViewById(R.id.editTextPhone2)
         tts = TextToSpeech(this,this)
 
-        imageview2.setOnClickListener{
+        imageview2?.setOnClickListener{
             tts?.speak("Please speak recipient's phone number",TextToSpeech.QUEUE_FLUSH,null,null)
             Thread.sleep(2000)
             speakPhone()

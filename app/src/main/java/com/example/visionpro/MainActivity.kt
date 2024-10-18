@@ -43,15 +43,20 @@ class MainActivity : AppCompatActivity(),View.OnClickListener ,View.OnLongClickL
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onClick(view:View){
-        val text = when (view.id){
-            R.id.msgbox -> "You Clicked messaging"
-            R.id.phoneMngr -> "You Clicked phone manager"
-            R.id.timeDate -> "You Clicked Time,Date and Battery Status"
-            R.id.cameraCard -> "You Clicked phone camera"
-            else -> throw IllegalArgumentException("Undefiend Clicked")
+        try {
+            val text = when (view.id) {
+                R.id.msgbox -> "You Clicked messaging"
+                R.id.phoneMngr -> "You Clicked phone manager"
+                R.id.timeDate -> "You Clicked Time,Date and Battery Status"
+                R.id.cameraCard -> "You Clicked phone camera"
+                else -> throw IllegalArgumentException("Undefiend Clicked")
+            }
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+            speak(text)
+        } catch (e:Exception){
+            e.printStackTrace()
         }
-        Toast.makeText(this,text,Toast.LENGTH_SHORT).show()
-        speak(text)
+
     }
 
     override fun onLongClick(view: View?): Boolean {
@@ -62,8 +67,12 @@ class MainActivity : AppCompatActivity(),View.OnClickListener ,View.OnLongClickL
             R.id.cameraCard -> Intent(this,CameraActivity::class.java)
             else -> throw IllegalArgumentException("Undefined CLicked")
         }
+        if (intent!= null && intent.resolveActivity(packageManager)!= null){
         startActivity(intent)
         return true
+        }
+        Toast.makeText(this,"Activity not found",Toast.LENGTH_SHORT).show()
+        return false
     }
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun speak(text:String){

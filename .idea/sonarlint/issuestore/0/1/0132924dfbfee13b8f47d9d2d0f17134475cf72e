@@ -1,0 +1,11 @@
+
+okotlin:S6508,"*Replace this usage of Void type with Unit.(ÿŞÑñ8…¸™–§2J$30ebed2d-27f2-4401-bb48-dc51b952049e
+okotlin:S6508~"*Replace this usage of Void type with Unit.(·ú´8…¸™–§2J$e3588398-5daa-4536-b319-267127a4ac6a
+nkotlin:S6508-"*Replace this usage of Void type with Unit.(ÁP8…¸™–§2J$45336693-bd81-42ce-afa3-fb6382d52033
+qkotlin:S1481s",Remove this unused "endTime" local variable.(È®’×8—¸™–§2J$e23760d3-fbf9-4f2a-8913-583cbbc3b562
+xkotlin:S1481q".Remove this unused "startTime" local variable.(”ğ¼Šıÿÿÿÿ8—¸™–§2J$3e5c4b9c-9002-4c15-b353-db1d2d986232
+_kotlin:S1128"Remove this unused import.(Ï¥Ñ‡8›¸™–§2J$30ed2899-2687-479f-a37d-32da34c01598
+_kotlin:S1128"Remove this unused import.(›Õ‡Û8œ¸™–§2J$0c33414f-966b-4421-90fd-8a5928080bfb
+gkotlin:S1874-"#Deprecated code should not be used.(ÁP8 ¸™–§2J$cdc19beb-9e07-4301-8cf1-e04f970428e6
+mkotlin:S1874z"#Deprecated code should not be used.(´º”ûÿÿÿÿ8 ¸™–§2J$5a0be33c-7db9-430a-943d-774d7eaca641
+hkotlin:S1874~"#Deprecated code should not be used.(·ú´8 ¸™–§2J$576ef03f-bf17-4ead-bc28-8fe150c7a443

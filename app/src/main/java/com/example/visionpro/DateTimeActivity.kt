@@ -71,9 +71,7 @@ class DateTimeActivity : AppCompatActivity(),View.OnClickListener,TextToSpeech.O
             val bst = "Your battery level is " + batteryPct.toString() + "percent and $batstate"
             tts?.speak(bst,TextToSpeech.QUEUE_FLUSH,null,null)
 
-
         }
-
     }
 
     public override fun onDestroy() {

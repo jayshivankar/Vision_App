@@ -31,3 +31,5 @@ S
 #app/src/main/java/assets/labels.txt,f/0/f0b1adacf1e344d7c302921a5d5c0b3af25a15d9
 k
 ;app/src/main/java/com/example/visionpro/TFLiteClassifier.kt,0/1/0132924dfbfee13b8f47d9d2d0f17134475cf72e
+C
+settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850

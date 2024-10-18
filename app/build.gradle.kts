@@ -36,15 +36,19 @@ android {
 }
 
 dependencies {
-
+    val cameraVersion = "1.3.1"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation("org.tensorflow:tensorflow-lite:+")
+    implementation("androidx.camera:camera-camera2:1.2.3")
+//    implementation(libs.tensorflow.lite)
     implementation(libs.litert.gpu)
     implementation(libs.play.services.tasks)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.litert)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

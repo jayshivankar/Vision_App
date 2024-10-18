@@ -10,8 +10,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="407dp"
-        android:layout_height="228dp"
+        android:layout_width="385dp"
+        android:layout_height="173dp"
         android:background="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
